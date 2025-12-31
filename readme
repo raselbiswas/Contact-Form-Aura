@@ -1,7 +1,132 @@
-crate form korar shomoy name diye add korte parbe - eita hoi ni
-ekhon drag and drop niye kaj cholose but drop korar por input. textara te popup a problem hosse , shekhanei kaj cholse
-select type niye kaj cholse
-Radio type ni kaj cholse
-abr input, textarea er defualt valute te problem hosse , shob gula ekta shathe kaj korse
-Input type number er default value dileo kaj korse na. eita korte hobe
+# Contact Form Aura
 
+Contact Form Aura is a modern, lightweight, and developer-friendly WordPress form builder plugin designed as a next-generation alternative to traditional contact form plugins.
+
+It focuses on clean UI, performance, flexibility, and real-world usability — built with modern WordPress best practices.
+
+---
+
+## 🚀 Features
+
+- Drag & Drop Form Builder (Admin)
+- Live Field Editing (Label, Placeholder, Default Value)
+- AJAX-based Form Submission
+- Secure Admin Actions (Nonce + Capability checks)
+- Clean, modern UI inspired by Ogrodut design system
+- Fully responsive (mobile-first)
+- Lightweight & performance-focused
+- Developer-friendly code structure
+
+---
+
+## 🧩 Supported Field Types
+
+- Text
+- Email
+- Textarea
+- Select
+- Radio
+- Checkbox
+- Number
+- Date
+- Phone
+- URL
+
+---
+
+## ⚙️ Tech Stack
+
+- **Backend:** PHP (WordPress Plugin API)
+- **Frontend:** HTML5, CSS3, jQuery
+- **Database:** WordPress DB (Custom Table)
+- **Security:** WordPress Nonce, Capability checks
+- **AJAX:** admin-ajax.php
+
+---
+
+## 🏗️ Plugin Structure
+
+contact-form-aura/
+│
+├── assets/
+│   ├── css/
+│   └── js/
+│
+├── includes/
+│   ├── class-cfaura-loader.php
+│   ├── cfaura-save.php
+│   └── cfaura-delete.php
+│
+├── templates/
+│   ├── admin/
+│   └── form-basic.php
+│
+├── contact-form-aura.php
+└── README.md
+
+---
+
+## 🧪 How It Works
+
+1. Create forms from WordPress Admin (Drag & Drop)
+2. Customize fields (label, placeholder, default values)
+3. Use shortcode to display forms on frontend
+4. Forms submit via AJAX (no page reload)
+5. Secure backend handling with WordPress standards
+
+---
+
+## 📌 Usage
+
+### Shortcode
+```php
+[contact_form_aura]
+
+
+You can place the shortcode inside:
+	•	Pages
+	•	Posts
+	•	Widgets
+	•	Elementor / Page Builders
+
+⸻
+
+🔐 Security
+	•	All AJAX requests protected with nonces
+	•	Admin actions restricted by capability (manage_options)
+	•	Data sanitized before saving
+	•	No direct file access allowed
+
+⸻
+
+📈 Future Roadmap
+	•	Conditional Logic (Show/Hide fields)
+	•	Multi-step Forms
+	•	Email Notifications
+	•	Form Submissions Manager
+	•	reCAPTCHA / Honeypot
+	•	Integrations (Mailchimp, Google Sheets, Stripe)
+	•	Pro Version (Advanced features)
+
+⸻
+
+🧑‍💻 Author
+
+Rasel Bisswas
+WordPress & PHP Developer
+
+
+⸻
+
+📄 License
+
+This project is licensed under the MIT License.
+
+⸻
+
+⭐ Why Contact Form Aura?
+
+Contact Form Aura is built with real-world production experience in mind —
+clean architecture, maintainable code, and scalable features.
+
+Ideal for developers, agencies, and businesses who need more control than traditional form plugins.
