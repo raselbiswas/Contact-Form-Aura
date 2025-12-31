@@ -1,0 +1,93 @@
+:root {
+  --wp_contact_form_8-primary: #2563eb;
+  --wp_contact_form_8-accent: #06b6d4;
+  --wp_contact_form_8-bg-light: #f1f5f9;
+  --wp_contact_form_8-text-dark: #0f172a;
+  --wp_contact_form_8-radius: 8px;
+  --wp_contact_form_8-transition: all 0.3s ease;
+  --wp_contact_form_8-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.wp_contact_form_8 {
+  background: var(--wp_contact_form_8-bg-light);
+  padding: 25px;
+  border-radius: var(--wp_contact_form_8-radius);
+  box-shadow: var(--wp_contact_form_8-shadow);
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.wp_contact_form_8-group {
+  margin-bottom: 16px;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.wp_contact_form_8-group label {
+  display: block;
+  font-weight: 500;
+  color: var(--wp_contact_form_8-text-dark);
+  margin-bottom: 6px;
+}
+
+.wp_contact_form_8-group input,
+.wp_contact_form_8-group textarea {
+  width: 100% !important;
+  padding: 10px 14px;
+  border: 1px solid #ddd;
+  border-radius: var(--wp_contact_form_8-radius);
+  transition: var(--wp_contact_form_8-transition);
+  box-sizing: border-box;
+  display: block;
+  background: #fff;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  color: var(--wp_contact_form_8-text-dark);
+}
+
+.wp_contact_form_8-group input:focus,
+.wp_contact_form_8-group textarea:focus {
+  border-color: var(--wp_contact_form_8-primary);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.wp_contact_form_8-btn {
+  background: var(--wp_contact_form_8-primary);
+  color: #fff;
+  border: none;
+  padding: 10px 22px;
+  border-radius: var(--wp_contact_form_8-radius);
+  cursor: pointer;
+  font-weight: 600;
+  transition: var(--wp_contact_form_8-transition);
+  width: auto;
+  display: inline-block;
+}
+
+.wp_contact_form_8-btn:hover {
+  background: var(--wp_contact_form_8-accent);
+}
+
+.wp_contact_form_8-response {
+  margin-top: 12px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--wp_contact_form_8-primary);
+}
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+  .wp_contact_form_8-form {
+    padding: 18px;
+  }
+
+  .wp_contact_form_8-btn {
+    width: 100%;
+    text-align: center;
+  }
+}

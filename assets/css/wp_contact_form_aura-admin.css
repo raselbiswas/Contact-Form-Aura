@@ -1,0 +1,310 @@
+:root {
+  --primary: #5B2E98;
+  --accent: #06B6D4;
+  --bg-light: #F1F5F9;
+  --text-dark: #0F172A;
+  --shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+
+.d-flex{
+  display: flex;
+}
+
+[draggable="true"] {
+  cursor: move;
+}
+
+.contentholder {
+  width: 300px;
+  min-height: 800px;
+  border: 2px dashed gray;
+  margin: 10px;
+  padding: 10px;
+}
+
+
+.contentholder.dropzone{
+  width: 600px
+}
+
+
+.contentholder.over {
+  border: 2px dashed red;
+}
+
+.list {
+  height: 20px;
+  background: linear-gradient(135deg, var(--bg-light), #fff);
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  font-weight: 600;
+  color: var(--text-dark);
+  box-shadow: var(--shadow);
+  margin: 8px;
+  transition: all 0.25s ease;
+  cursor: grab;
+  user-select: none;
+  padding: 10px 20px;
+}
+
+.list:hover {
+  border-color: var(--primary);
+  transform: translateY(-3px);
+  box-shadow: 0 1px 4px rgba(91, 46, 152, 0.25);
+}
+
+.is-dragging {
+  opacity: 0.6;
+  border: 2px solid #6a5acd;
+}
+
+.dropped.drag-over {
+  border: 2px dashed #6a5acd;
+}
+
+.box-buttons {
+  position: relative;
+  /* top: 4px; */
+  /* right: 4px; */
+  display: flex;
+  gap: 4px;
+  z-index: 9;
+  margin-bottom: 10px;
+  justify-content: end;
+  float: right;
+}
+
+.box-buttons button {
+  font-size: 10px;
+  padding: 3px 6px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.box-buttons .reorder-btn {
+  background: #6a5acd;
+  cursor: move;
+}
+
+.box-buttons .edit-btn {
+  background: #ff9800;
+}
+
+
+#dropzone .list{
+  cursor: auto;
+}
+
+
+#dropzone .list{
+  display: block;
+  height: unset;
+  position: relative;
+}
+
+#dropzone .key-label{
+  display: none;
+}
+
+
+#dropzone .list label{
+  display: block;
+  margin-bottom: 10px
+}
+
+#dropzone .list input, #dropzone .list textarea, #dropzone select{
+  width: 100%;
+  max-width: 100%;
+  pointer-events: none;
+}
+
+#dropzone .list textarea{
+  resize: none
+}
+#dropzone .radiolists,
+#dropzone .checkList{
+  pointer-events: none;
+}
+#dropzone .list[data-type="radio"] input,
+#dropzone .list[data-type="checkbox"] input{
+  width: unset
+}
+
+#dropzone .list.dropped .text {
+  position: absolute;
+  top: 11px;
+  left: 50%;
+  transform: translate(-50% , 0);
+  font-size: 25px;
+  font-weight: 700;
+  color: rgba(91, 46, 152, 0.07);
+  text-transform: uppercase;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+}
+
+
+#dropzone .list.dropped label,
+#dropzone .list.dropped input,
+#dropzone .list.dropped textarea,
+#dropzone .list.dropped select,
+#dropzone .list.dropped .key-label {
+  position: relative;
+  z-index: 2;
+}
+
+
+#dropzone .list:hover{
+  transform: unset;
+  border-color: transparent
+}
+
+
+
+
+.field-option {
+  margin-bottom: 15px;
+}
+
+.field-option input[type="text"] {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-top: 6px;
+}
+
+.modal-actions {
+  text-align: right;
+  margin-top: 20px;
+}
+
+.modal-actions button {
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.button-primary {
+  background: #5B2E98;
+  color: #fff;
+}
+
+.button {
+  background: #E5E7EB;
+  color: #333;
+  margin-left: 10px;
+}
+
+.option-editor {
+  margin-top: 20px;
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+}
+
+.option-editor h4 {
+  margin-bottom: 10px;
+  color: #5B2E98;
+  font-size: 15px;
+}
+
+.option-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.option-item input {
+  flex: 1;
+  padding: 6px 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.option-item .remove-option {
+  background: #dc2626;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 13px;
+  cursor: pointer;
+}
+.option-item .remove-option:hover {
+  background: #b91c1c;
+}
+
+
+.option-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  justify-content: space-between;
+}
+
+.option-item input.option-value {
+  flex: 1;
+  padding: 6px 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.option-item label {
+  font-size: 13px;
+  color: #475569;
+}
+
+.option-item .remove-option {
+  background: #dc2626;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 13px;
+  cursor: pointer;
+}
+.option-item .remove-option:hover {
+  background: #b91c1c;
+}
+
+
+.wp_contact_form_aura_modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  font-family: 'Poppins', sans-serif;
+}
+
+.wp_contact_form_aura_modal_overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.wp_contact_form_aura_modal_box {
+  position: relative;
+  background: #fff;
+  border-radius: 10px;
+  width: 420px;
+  margin: 100px auto;
+  padding: 25px 30px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  z-index: 2;
+}
+
+.wp_contact_form_aura_modal_box h3 {
+  margin-top: 0;
+  color: #5B2E98;
+  margin-bottom: 20px;
+}
